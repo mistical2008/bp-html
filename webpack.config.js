@@ -4,7 +4,13 @@ const HtmlWebpackPlugin = require('html-webpack-plugin')
 const HtmlWebpackPugPlugin = require('html-webpack-pug-plugin')
 const MiniCssExtractPlugin = require('mini-css-extract-plugin')
 const OptimizeCSSAssetsPlugin = require('optimize-css-assets-webpack-plugin')
+const StylelintPlugin = require('stylelint-webpack-plugin');
 
+const stylelintOptions = {
+  configFile: path.resolve(__dirname, ".stylelintrc.json"),
+  context: path.resolve(__dirname, "./css"),
+  files: "**/*.css",
+}
 
 module.exports = {
   entry: {
@@ -20,9 +26,9 @@ module.exports = {
     // Generating HTML
     new HtmlWebpackPlugin({ template: 'pug/_index.pug', filename: 'index.html' }),
     new HtmlWebpackPugPlugin(),
-
     new MiniCssExtractPlugin({ filename: 'style.css' }), // Generating CSS
-    new CopyWebpackPlugin([{ from: 'img', to: 'img' }]) // Copy images
+    new StylelintPlugin(stylelintOptions), // Stylelint checking
+    new CopyWebpackPlugin([{ from: 'img', to: 'img' }]), // Copy images
   ],
 
   optimization: {
