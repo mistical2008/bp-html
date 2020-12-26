@@ -18,6 +18,7 @@
 
 ## TODO
 - [ ] Webpack config refactoring
+  - [ ] Split webpack config to `development` and `production`
 - [ ] Integrate eslint into webpack
 - [ ] Image-minimizer setup
 - [ ] Add plugins for performance optimisation
