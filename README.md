@@ -1,4 +1,11 @@
-# Landing: Eco cabins
+# Frontend boilerplate
+
+## Stask
+- Pug — HTML templating
+- postCSS — extending CSS
+- ESlint — JS linting
+- Stylelint — CSS linting
+- Webpack — bundling assets
 
 ## Links
 - [Comp](https://www.figma.com/file/qge0jETWqUffYgREsFNP7z/EcoCabins-landingspage?node-id=0%3A2)
@@ -8,3 +15,9 @@
 - [compression-webpack-plugin](https://webpack.js.org/plugins/compression-webpack-plugin/)
 - [commons-chunk-plugin](https://webpack.js.org/plugins/commons-chunk-plugin/)
 - [NpmInstallPlugin](https://webpack.js.org/plugins/npm-install-webpack-plugin/)
+
+## TODO
+- [ ] Webpack config refactoring
+- [ ] Integrate eslint into webpack
+- [ ] Image-minimizer setup
+- [ ] Add plugins for performance optimisation
