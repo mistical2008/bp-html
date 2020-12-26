@@ -1,6 +1,7 @@
 # Frontend boilerplate
+> Custom boilerplate for simple html-projects with css-styling and JS
 
-## Stask
+## Stack
 - Pug — HTML templating
 - postCSS — extending CSS
 - ESlint — JS linting
