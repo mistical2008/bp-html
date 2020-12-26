@@ -15,6 +15,7 @@
 - [compression-webpack-plugin](https://webpack.js.org/plugins/compression-webpack-plugin/)
 - [commons-chunk-plugin](https://webpack.js.org/plugins/commons-chunk-plugin/)
 - [NpmInstallPlugin](https://webpack.js.org/plugins/npm-install-webpack-plugin/)
+- [Babeljs](https://babeljs.io/setup#installation)
 
 ## TODO
 - [ ] Webpack config refactoring
