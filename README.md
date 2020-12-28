@@ -21,6 +21,7 @@
 ## TODO
 - [ ] Webpack config refactoring
   - [ ] Split webpack config to `development` and `production`
+  - [ ] Move plugins to separate file
 - [ ] Add ES6 support for pug templates
 - [ ] Integrate eslint into webpack
 - [ ] Image-minimizer setup
