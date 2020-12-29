@@ -19,6 +19,14 @@
 - [NpmInstallPlugin](https://webpack.js.org/plugins/npm-install-webpack-plugin/)
 - [Babeljs](https://babeljs.io/setup#installation)
 
+## Boilerplates
+- [taniarascia](https://github.com/taniarascia/webpack-boilerplate)
+- [WeAreAthlon](https://github.com/WeAreAthlon/frontend-webpack-boilerplate)
+  > paths
+- [tomik23](https://github.com/tomik23/webpack-boilerplate)
+  > json data templates and entries
+- [KomilT](https://github.com/KomilT/webpack-boilerplate)
+
 ## TODO
 - [ ] Webpack config refactoring
   - [ ] Split webpack config to `development` and `production`
