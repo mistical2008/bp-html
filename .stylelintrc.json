@@ -1,7 +1,16 @@
 {
   "extends": [
     "stylelint-config-standard",
-    "stylelint-config-rational-order",
+    "stylelint-config-idiomatic-order",
     "stylelint-config-prettier"
-  ]
+  ],
+  "rules": {
+    "order/order": [
+      "custom-properties",
+      "dollar-variables",
+      "declarations",
+      "at-rules",
+      "rules"
+    ]
+  }
 }

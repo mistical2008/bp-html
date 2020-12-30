@@ -1,5 +1,6 @@
 # Ignore artifacts:
-build
-dist
-coverage
-node_modules
+node_modules/
+build/
+dist/
+tags
+**/.DS_Store
