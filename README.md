@@ -9,6 +9,7 @@
 - Webpack — bundling assets
 
 ## Links
+- [Webpack setup: step-by-step](https://www.valentinog.com/blog/webpack)
 - [Eslint with Prettier and Editorconfig](https://blog.theodo.com/2019/08/empower-your-dev-environment-with-eslint-prettier-and-editorconfig-with-no-conflicts/)
 - [Настройка Webpack с нуля](https://habr.com/ru/post/524260/)
 - [Webpack setup](https://jontorrado.medium.com/working-with-webpack-4-es6-postcss-with-preset-env-and-more-93b3d77db7b2)
