@@ -10,6 +10,7 @@
 
 ## Links
 - [Eslint with Prettier and Editorconfig](https://blog.theodo.com/2019/08/empower-your-dev-environment-with-eslint-prettier-and-editorconfig-with-no-conflicts/)
+- [SurviveJS: webpack advanced](https://survivejs.com/webpack)
 - [Webpack setup](https://jontorrado.medium.com/working-with-webpack-4-es6-postcss-with-preset-env-and-more-93b3d77db7b2)
 - [eslintWebpackPlugin](https://webpack.js.org/plugins/eslint-webpack-plugin/)
 - [image-minimizer-plugin](https://webpack.js.org/plugins/image-minimizer-webpack-plugin/)
