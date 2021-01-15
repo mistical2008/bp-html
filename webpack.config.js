@@ -24,7 +24,7 @@ module.exports = {
 
   plugins: [
     // Generating HTML
-    new HtmlWebpackPlugin({ template: 'pug/_index.pug', filename: 'index.html' }),
+    new HtmlWebpackPlugin({ template: 'pug/_index.pug', filename: 'index.html', DATA: require('./data/index.json') }),
     new HtmlWebpackPugPlugin(),
     new MiniCssExtractPlugin({ filename: 'style.css' }), // Generating CSS
     new StylelintPlugin(stylelintOptions), // Stylelint checking
@@ -42,7 +42,10 @@ module.exports = {
       // HTML
       {
         test: /\.pug$/,
-        loader: 'pug-loader'
+        loader: 'pug-loader',
+        options: {
+          self: true,
+        }
       },
 
       // CSS
