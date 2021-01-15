@@ -1,6 +1,8 @@
 extends _layouts/main-page.pug
 
+block variables
+
 block pageContent
-    // content goes here
-    //- - var foo_str = self.htmlWebpackPlugin.options.DATA
-    p!= foo_str.bar
+  // content goes here
+  h1= data.head.title
+  p!= data.head.description

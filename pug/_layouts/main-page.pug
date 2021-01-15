@@ -1,12 +1,13 @@
-// find a place for variables
-- var foo_str = self.htmlWebpackPlugin.options.DATA
+include ../_includes/data.pug
+include ../_mixins/head.pug
 
-include ../_includes/head.pug
+head
+  +head(data)
 
 body
   main
     block pageContent
-    // It's just layout file. Doesn't write code here.
-    // only set common blocks for the current layout or change paths to includes.
+      // It's just layout file. Doesn't write code here.
+      // only set common blocks for the current layout or change paths to includes.
 
 include ../_blocks/footer.pug
