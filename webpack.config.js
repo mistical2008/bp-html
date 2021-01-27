@@ -8,13 +8,13 @@ const StylelintPlugin = require('stylelint-webpack-plugin');
 
 const stylelintOptions = {
   configFile: path.resolve(__dirname, ".stylelintrc.json"),
-  context: path.resolve(__dirname, "./css"),
+  context: path.resolve(__dirname, "./src/css"),
   files: "**/*.css",
 }
 
 module.exports = {
   entry: {
-    script: './js/_script.js'
+    script: './src/js/index.js'
   },
 
   output: {
@@ -24,11 +24,11 @@ module.exports = {
 
   plugins: [
     // Generating HTML
-    new HtmlWebpackPlugin({ template: 'pug/_index.pug', filename: 'index.html', DATA: require('./data/index.json') }),
+    new HtmlWebpackPlugin({ template: 'src/pug/index.pug', filename: 'index.html' }),
     new HtmlWebpackPugPlugin(),
     new MiniCssExtractPlugin({ filename: 'style.css' }), // Generating CSS
     new StylelintPlugin(stylelintOptions), // Stylelint checking
-    new CopyWebpackPlugin([{ from: 'img', to: 'img' }]), // Copy images
+    new CopyWebpackPlugin([{ from: 'src/img', to: 'assets' }, { from: 'src/assets', to: 'assets' }]), // Copy images
   ],
 
   optimization: {
@@ -42,10 +42,7 @@ module.exports = {
       // HTML
       {
         test: /\.pug$/,
-        loader: 'pug-loader',
-        options: {
-          self: true,
-        }
+        loader: 'pug-loader'
       },
 
       // CSS
@@ -69,19 +66,21 @@ module.exports = {
           {
             loader: require.resolve('postcss-loader'),
             options: {
-              ident: 'postcss',
-              plugins: () => [
-                require('postcss-nested'),
-                require('postcss-flexbugs-fixes'),
-                require('postcss-preset-env')({
-                  autoprefixer: {
-                    flexbox: 'no-2009',
-                  },
-                  stage: 3,
-                }),
-                require('postcss-normalize')
-              ],
-              sourceMap: true
+              postcssOptions: {
+                plugins: [
+                  'postcss-import',
+                  'postcss-normalize',
+                  'postcss-nested',
+                  'postcss-flexbugs-fixes',
+                  ['postcss-preset-env',{
+                    autoprefixer: {
+                      flexbox: 'no-2009',
+                    },
+                    stage: 3,
+                  }],
+                ],
+                sourceMap: true
+              }
             }
           }
         ]
