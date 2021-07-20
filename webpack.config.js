@@ -1,99 +1,58 @@
-const path = require("path")
-const CopyWebpackPlugin = require("copy-webpack-plugin")
-const HtmlWebpackPlugin = require("html-webpack-plugin")
-const HtmlWebpackPugPlugin = require("html-webpack-pug-plugin")
-const MiniCssExtractPlugin = require("mini-css-extract-plugin")
-const OptimizeCSSAssetsPlugin = require("optimize-css-assets-webpack-plugin")
-const StylelintPlugin = require("stylelint-webpack-plugin")
+const { mode } = require("webpack-nano/argv");
+const { merge } = require("webpack-merge");
+const parts = require("./webpack.parts");
 
-const stylelintOptions = {
-  configFile: path.resolve(__dirname, ".stylelintrc.json"),
-  context: path.resolve(__dirname, "./src/css"),
-  files: "**/*.css",
-  fix: true,
-}
-const entryDir = "src/"
+const cssLoaders = [parts.postCssLoader()];
+const imageSizeLimit = 15000;
 
-module.exports = {
-  entry: {
-    script: "./" + entryDir + "js/_script.js",
+// Set config for css-modules
+// const modulesConf = {
+// localIdentName: "[folder]__[local]--[hash:base64:5]",
+// auto: true,
+// };
+
+// CONFIGS:
+const commonConfig = merge([
+  { entry: ["./src/index.js"] },
+  {
+    output: {
+      clean: true,
+      assetModuleFilename: "assets/[hash][ext][query]",
+    },
   },
+  parts.aliases(),
+  parts.pug(),
+  parts.esbuild(),
+  parts.loadFonts(),
+  parts.loadImages({ limit: imageSizeLimit }),
+  parts.extractCSS({
+    loaders: cssLoaders,
+  }),
+  parts.copyAssets(),
+]);
 
-  output: {
-    filename: "[name].js",
-    path: path.resolve(__dirname, "dist"),
-  },
+// FIXME:  <20-07-21, > Breaks CSS. Need to fix
+// const productionConfig = merge([parts.eliminateUnusedCSS()]);
+const productionConfig = merge({});
 
-  plugins: [
-    // Generating HTML
-    new HtmlWebpackPlugin({
-      template: "./" + entryDir + "pug/_index.pug",
-      filename: "index.html",
-    }),
-    new HtmlWebpackPugPlugin(),
-    new MiniCssExtractPlugin({ filename: "style.css" }), // Generating CSS
-    new StylelintPlugin(stylelintOptions), // Stylelint checking
-    new CopyWebpackPlugin([{ from: "./" + entryDir + "img", to: "img" }]), // Copy images
-  ],
+const developmentConfig = merge([
+  { entry: ["webpack-plugin-serve/client"] },
+  { stats: "normal" },
+  { stats: { errorDetails: true } },
+  { stats: { children: true } },
+  parts.devServer(),
+]);
 
-  optimization: {
-    minimizer: [new OptimizeCSSAssetsPlugin({})],
-  },
+const getConfig = (mode) => {
+  process.env.NODE_ENV = mode;
+  switch (mode) {
+    case "production":
+      return merge(commonConfig, productionConfig, { mode });
+    case "development":
+      return merge(commonConfig, developmentConfig, { mode });
+    default:
+      throw new Error(`Trying to use an unknown mode, ${mode}`);
+  }
+};
 
-  module: {
-    rules: [
-      // HTML
-      {
-        test: /\.pug$/,
-        loader: "pug-loader",
-      },
-
-      // CSS
-      {
-        test: /\.css$/,
-        use: [
-          // Extract to external CSS file
-          { loader: MiniCssExtractPlugin.loader },
-
-          // Regular CSS
-          {
-            loader: require.resolve("css-loader"),
-            options: {
-              importLoaders: 1,
-              sourceMap: true,
-              url: false,
-            },
-          },
-
-          // PostCSS with plugins
-          {
-            loader: require.resolve("postcss-loader"),
-            options: {
-              ident: "postcss",
-              plugins: () => [
-                require("postcss-nested"),
-                require("postcss-flexbugs-fixes"),
-                require("postcss-preset-env")({
-                  autoprefixer: {
-                    flexbox: "no-2009",
-                  },
-                  stage: 3,
-                }),
-              ],
-              sourceMap: true,
-            },
-          },
-        ],
-      },
-    ],
-  },
-
-  // Development server
-  devServer: {
-    contentBase: path.join(__dirname, "dist"),
-    port: 4000,
-    writeToDisk: true,
-  },
-
-  mode: process.env.NODE_ENV || "development",
-}
+module.exports = getConfig(mode);
