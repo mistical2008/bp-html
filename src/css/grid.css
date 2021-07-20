@@ -1,0 +1,43 @@
+._container { 
+  display: flex;
+  flex-wrap: wrap;
+}
+
+._container._fw { 
+  @util margin(null, -15px, null)
+}
+
+._wrapper {
+  max-width: var(--global-container-width);
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+/* ._g-wrapper { */
+  /* max-width: 856px; */
+  /* margin: 0 auto; */
+  /* padding: 0 20px; */
+/* } */
+
+._col {
+  --columns: var(--global-grid-columns, 12); /* number of columns in the grid system */
+  --width: var(--width-mobile, 0); /* width of the element */
+  
+  flex-basis: calc(var(--width) / var(--columns) * 100%);
+  padding-right: var(--global-grid-gutter);
+  padding-left: var(--global-grid-gutter);
+}
+
+@media (min-width: 768px) {
+  ._col {
+    --width-tablet: var(--width-mobile);
+    --width: var(--width-tablet);
+  }
+}
+
+@media (min-width: 991px) {
+  ._col {
+    --width-desktop: var(--width-tablet);
+    --width: var(--width-desktop);
+  }
+}
