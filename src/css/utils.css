@@ -1,0 +1,14 @@
+/* CSS utils */
+
+.visually-hidden {
+  @util hide-visually;
+}
+
+.fw {
+  width: 100%;
+}
+
+._blur {
+  filter: blur(8px);
+}
+
