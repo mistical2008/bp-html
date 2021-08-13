@@ -6,9 +6,9 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "bl:update": "npx browserslist@latest --update-db",
-    "build": "node_modules/.bin/wp --mode production",
-    "start": "node_modules/.bin/wp --mode development",
-    "watch": "node_modules/.bin/nodemon --watch webpack.*.js --exec \"npm start\""
+    "build:prod": "node_modules/.bin/wp --mode production",
+    "build:dev": "node_modules/.bin/wp --mode development",
+    "start": "node_modules/.bin/nodemon --watch webpack.*.js --exec \"npm run build:dev\""
   },
   "keywords": [],
   "author": "",
