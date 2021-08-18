@@ -1,10 +1,13 @@
 .btn {
   display: inline-block;
-  flex-shrink: 0;
+  /* flex-shrink: 0; */
+  position: relative;
+  padding: 0.6rem 1.5rem;
   color: var(--global-color-white-900);
   font: inherit;
-  font-size: var(--global-text-fontSize-m);
-  line-height: 150%;
+  /* font-size: var(--global-text-fontSize-m); */
+  line-height: 1;
+  text-decoration: none;
   vertical-align: middle;
   @util padding(15px 63px);
   background-color: var(--global-blue-700-color);
@@ -17,8 +20,23 @@
 .btn:hover {
   background-color: var(--global-blue-900-color);
 }
+/* icon-left, icon-right, icon-ovf-left, icon-ovf-right, icon-ovf-center */
+.btn_icon_left {
+}
 
-.btn-l {
+.btn_icon_right {
+}
+
+.btn_icon_ovf-left {
+}
+
+.btn_icon_ovf-right {
+}
+
+.btn_icon_ovf-center {
+}
+
+/* .btn-l {
   @util padding(15px 63px);
 }
 
@@ -29,17 +47,17 @@
 .btn_ghost {
   color: var(--global-blue-700-color);
   background-color: var(--global-color-white);
-  border: 1px solid var(--global-blue-700-color);
-}
+  border: 1px solid currentColor;
+} */
 
 .btn,
 .btn:hover {
   transition: background-color 0.3s ease-in-out;
 }
 
-.btn_ghost:hover {
+/* .btn_ghost:hover {
   color: var(--global-color-white-900);
-}
+} */
 
 a.btn {
   text-decoration: none;

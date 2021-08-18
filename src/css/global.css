@@ -1,19 +1,28 @@
 @import 'sanitize.css';
+@import 'sanitize.css/typography.css';
+@import 'sanitize.css/forms.css';
+@import 'sanitize.css/assets.css';
+@import 'sanitize.css/reduce-motion.css';
 
+/* Set core root defaults */
 html {
-  font-family: 'mazzardh_regular', Arial, Helvetica, sans-serif;
+  font-family: 'Mazzard H', Arial, Helvetica, sans-serif;
   color: var(--global-dark-800-color);
+  scroll-behavior: smooth;
 }
 
+/* Set core body defaults */
 body {
-  /* margin-top: 120px; */
+  min-height: 100vh;
+  text-rendering: optimizeSpeed;
+  line-height: 1.5;
 }
 
-/* body > .wrapper { */
-  /* position: relative; */
-/* } */
-
-input:required:invalid,
+/* Blur images when they have no alt attribute */
+img:not([alt]) {
+  filter: blur(10px);
+}
+/* input:required:invalid,
 input:invalid {
   border: 2px solid #cd5c5c;
 }
@@ -29,4 +38,4 @@ input:focus:invalid {
 input:valid {
   border: 2px solid black;
 }
-
+ */
