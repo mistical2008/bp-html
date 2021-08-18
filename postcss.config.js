@@ -1,10 +1,15 @@
+// @ts-ignore
 const postcssImport = require("postcss-import");
 const postcssNormalize = require("postcss-normalize");
 const fontsConfig = require("./globalConfig.js").fonts;
 
 module.exports = {
   plugins: [
-    // require("postcss-font-magician")(fontsConfig),
+    require("postcss-font-magician")(fontsConfig),
+    require("postcss-easysprites")({
+      imagePath: './src/assets/img',
+      spritePath: './dist/assets/img/sprites',
+  }),
     require("stylelint"),
     require("postcss-focus"),
     require("postcss-url"),
@@ -17,9 +22,12 @@ module.exports = {
     require("postcss-responsive-images"),
     postcssImport(postcssNormalize().postcssImport()),
     require("postcss-utilities"),
+    require('postcss-pxtorem')({replace: false}),
     require("postcss-browser-reporter"),
   ],
 };
+
+
 // https://ismamz.github.io/postcss-utilities
 // https://github.com/postcss/postcss-browser-reporter
 // https://github.com/azat-io/postcss-responsive-images
