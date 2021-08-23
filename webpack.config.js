@@ -37,10 +37,18 @@ const productionConfig = merge({});
 
 const developmentConfig = merge([
   { entry: ["webpack-plugin-serve/client"] },
-  { stats: "normal" },
-  { stats: { errorDetails: true } },
+  { stats: "minimal" },
+  { stats: { errorDetails: 'auto' } },
   { stats: { children: true } },
   parts.devServer(),
+  /* parts.dashboardPlugin({
+    includeAssets: ['index', 'main', 'bundle'],
+  }), */
+  parts.bundleAnalyzerPlugin({
+    analyzerMode: 'static',
+    reportFilename: 'bundle-report-dev.html',
+    openAnalyzer: false,
+  }),
 ]);
 
 const getConfig = (mode) => {

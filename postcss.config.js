@@ -2,29 +2,43 @@
 const postcssImport = require("postcss-import");
 const postcssNormalize = require("postcss-normalize");
 const fontsConfig = require("./globalConfig.js").fonts;
+const customFunctions = require("./postcss-functions/fluid")
 
 module.exports = {
+  // syntax: 'postcss-scss',
   plugins: [
     postcssImport(
       postcssNormalize().postcssImport(),
       require("postcss-font-magician")(fontsConfig),
+      require("stylelint"),
     ),
+    require("postcss-google-font"),
+    require("postcss-functions")({
+      functions: {
+        ...customFunctions,
+      }
+    }),
+    require("postcss-color-alpha"),
     require("postcss-easysprites")({
       imagePath: './src/assets/img',
       spritePath: './dist/assets/img/sprites',
     }),
-    require("stylelint"),
-    require("postcss-focus"),
-    require("postcss-url"),
     require("postcss-sorting"),
+    require("postcss-advanced-variables"),
+    require("postcss-url"),
     require("postcss-easy-z"),
     require("postcss-easing-gradients"),
     // require("tailwindcss"),
-    require("autoprefixer"),
+    require("postcss-aspect-ratio"),
     require("postcss-preset-env"),
     require("postcss-responsive-images"),
     require("postcss-utilities"),
-    require('postcss-pxtorem')({ replace: false }),
+    require("autoprefixer"),
+    require("postcss-focus"),
+    require('postcss-pxtorem')({ replace: false }), // rem as fallback
+    require("postcss-color-rgba-fallback"),
+    require('postcss-flexbugs-fixes'),
+    require('postcss-will-change'),
     require("postcss-browser-reporter"),
   ],
 };

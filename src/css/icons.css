@@ -1,7 +1,62 @@
 .icon {
-
+  position: relative;
+  z-index: 0;
+}
+.icon::before {
+  content: '';
+  display: block;
+  position: absolute;
+  /* @util center; */
+  top: 50%;
+  left: 0;
+  transform: translateY(-50%);
+  /* width: 50%; */
+  height: 100%;
+  background-repeat: no-repeat;
+  z-index: -1;
+  background-size: 100%;
 }
 
-.icon-call {
-  background-image: url('../assets/img/image.jpg');
+._icon_left {
+  left: 0;
+}
+
+.icon-menu::before {
+  content: '';
+  display: block;
+  position: absolute;
+  @util center;
+  width: 100%;
+  height: 100%;
+  background-image: url('../assets/img/icon-menu.svg');
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+}
+
+.icon-call::before {
+  display: block;
+  position: absolute;
+  content: '';
+  background-image: url('../assets/img/icon-phone.svg');
+  background-repeat: no-repeat;
+}
+
+.icon-fb {
+  background-image: url('../assets/img/icon-fb-black.svg');
+}
+
+.icon-vimeo {
+  background-image: url('../assets/img/icon-vimeo-black.svg');
+}
+
+.icon-instagram {
+  background-image: url('../assets/img/icon-insta-black.svg');
+}
+
+.icon-attachment::before {
+  background-image: url('../assets/img/icon-attachment.svg');
+}
+
+.icon-circle::before {
+  background-image: url('../assets/img/icon-circle.svg');
 }

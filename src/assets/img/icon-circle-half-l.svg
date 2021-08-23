@@ -1,0 +1,11 @@
+<svg width="80" height="80" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <mask id="a" maskUnits="userSpaceOnUse" x="0" y="0" width="80" height="80">
+    <circle cx="40" cy="40" r="35" stroke="#363434" stroke-width="10"/>
+  </mask>
+  <g mask="url(#a)">
+    <mask id="b" fill="#fff">
+      <path d="M80 40a40 40 0 11-68.284-28.284L40 40h40z"/>
+    </mask>
+    <path d="M80 40a40 40 0 11-68.284-28.284L40 40h40z" stroke="#76F4F6" stroke-width="20" mask="url(#b)"/>
+  </g>
+</svg>

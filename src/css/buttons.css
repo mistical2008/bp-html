@@ -2,19 +2,21 @@
   display: inline-block;
   /* flex-shrink: 0; */
   position: relative;
-  padding: 0.6rem 1.5rem;
   color: var(--global-color-white-900);
   font: inherit;
-  /* font-size: var(--global-text-fontSize-m); */
+  font-size: calc(12px + (18 - 12) * ((100vw - 320px) / (1280 - 320)));
+  font-weight: 700;
   line-height: 1;
   text-decoration: none;
   vertical-align: middle;
-  @util padding(15px 63px);
-  background-color: var(--global-blue-700-color);
+  background-color: transparent;
   border: none;
-  border-radius: 4px;
   cursor: pointer;
   text-align: center;
+  text-transform: lowercase;
+
+  /* debug */
+  /* outline: 1px solid red; */
 }
 
 .btn:hover {

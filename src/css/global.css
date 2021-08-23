@@ -22,6 +22,12 @@ body {
 img:not([alt]) {
   filter: blur(10px);
 }
+
+/* Set transition to all links */
+a, a:link, a:active, a:visited {
+  transition: all 0.3s ease-in-out;
+}
+
 /* input:required:invalid,
 input:invalid {
   border: 2px solid #cd5c5c;

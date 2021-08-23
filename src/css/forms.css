@@ -3,5 +3,73 @@ label {
 }
 
 fieldset {
+  margin: 0;
+  padding: 0;
   border: none;
+}
+
+.input-group {
+  position: relative;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+/* hide input placeholder */
+.form-input::placeholder {
+  color: transparent;
+}
+
+.form-input {
+  width: 100%;
+  /* border: none; */
+  /* border-bottom: 1px solid rgba(255, 255, 255, 0.2); */
+  transition: all 0.3s ease-in-out;
+}
+
+.form-input_invalid {
+  color: var(--global-error-color-900); 
+  border-color: var(--global-error-color-900); 
+}
+
+.form-input:disabled {
+  color: rgba(255, 255, 255, 0.2); 
+  border-color: rgba(255, 255, 255, 0.2); 
+}
+
+.form-input:disabled + .input-label {
+  color: rgba(255, 255, 255, 0.2); 
+  border-color: rgba(255, 255, 255, 0.1); 
+}
+
+
+.form-input:focus {
+  border-color: var(--global-accent-900-color);
+  transition: all 0.3s ease-in-out;
+}
+
+/* input style while typing */
+.form-input:not(:placeholder-shown) + .input-label {
+  opacity: 0;
+}
+
+.form-input_file:focus + .input-label,
+.form-input_file:active + .input-label {
+  color: var(--global-grey-800-color);
+}
+
+.input-label {
+  position: absolute;
+  top: 50%;
+  left: 18px;
+  transform: translateY(-50%);
+  cursor: text;
+  /* pointer-events: none; */
+  transition: all 0.3s ease-in-out;
+}
+
+/* add some symbol for required fields */
+.input-label_required::after {
+  content: "*";
+  color: var(--global-accent-900-color);
 }

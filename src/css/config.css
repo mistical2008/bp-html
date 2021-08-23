@@ -14,7 +14,7 @@
   --global-color-white-800: #FAFBFD;
 
   /* Spacings: */
-  --global-container-width: 1290px;
+  --global-container-width: 1280px;
 
   /* Grid */  
   --global-grid-columns: 12;
@@ -32,11 +32,21 @@
   --global-text-fontSize-m: 16px;
   --global-text-fontSize-s: 14px;
 
+  /* Z-indexes */
   --global-z-background: z-stack();
   --global-z-content: z-stack();
   --global-z-decor: z-stack();
   --global-z-header: z-stack();
   --global-z-burger: z-stack();
   --global-z-popup: z-stack();
+
+  /* Timings */
+  --global-time-500: 0.5s;
+  --global-time-400: 0.4s;
+  --global-time-300: 0.3s;
+  --global-time-200: 0.2s;
+  --global-time-100: 0.1s;
+
+  --global-time-hover: var(--global-time-300);
 
 }

@@ -1,4 +1,7 @@
-/* CSS utils */
+/* 
+* CSS utils
+*
+* */
 
 ._visually-hidden {
   @util hide-visually;
@@ -10,5 +13,107 @@
 
 ._blur {
   filter: blur(8px);
+}
+
+/* FONTS */
+._font_wght-100 {
+  font-weight: 100;
+}
+
+._font_wght-200 {
+  font-weight: 200;
+}
+
+._font_wght-300 {
+  font-weight: 300;
+}
+
+._font_wght-400 {
+  font-weight: 400;
+}
+
+._font_wght-500 {
+  font-weight: 500;
+}
+
+._font_wght-600 {
+  font-weight: 600;
+}
+
+._font_wght-700 {
+  font-weight: 700;
+}
+
+._font_wght-800 {
+  font-weight: 800;
+}
+
+/* DISPLAY */
+._flex {
+  display: flex;
+}
+
+._flex_center {
+  justify-content: center;
+  align-items: center;
+}
+
+._flex_row {
+  flex-direction: row;
+}
+
+._flex_wrap {
+  flex-wrap: wrap;
+}
+
+._col_span2 {
+  --width-mobile: 4;
+  --width-desktop: 2;
+}
+
+._flow_hr > * + * {
+  margin-left: var(--flowMargin, 15px);
+}
+
+._flow_ver > * + * {
+  margin-top: var(--flowMargin, 15px);
+}
+
+._container._fw {
+  /* width: 100%; */
+  @util margin(null, calc(var(--global-grid-gutter) * -1), null, calc(var(--global-grid-gutter) * -1));
+}
+
+._aspect-box_16x9 {
+  display: block;
+  aspect-ratio: '16:9';
+}
+
+/* COLORS */
+._bg_dark {
+  background-color: var(--global-dark-900-color);
+}
+
+._clr_accent {
+  color: var(--global-accent-900-color);
+}
+
+._playground {
+  @util padding(50px)
+  width: 100%;
+  min-height: 300px;
+  overflow: auto;
+}
+
+/* SCROLLBARS */
+ /* Hide scrollbar for Chrome, Safari and Opera */
+._scrollbar_hide::-webkit-scrollbar {
+  display: none;
+}
+
+/* Hide scrollbar for IE, Edge and Firefox */
+._scrollbar_hide {
+  -ms-overflow-style: none;  /* IE and Edge */
+  scrollbar-width: none;  /* Firefox */
 }
 

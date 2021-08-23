@@ -5,6 +5,8 @@ const HtmlWebpackPlugin = require("html-webpack-plugin");
 const HtmlWebpackPugPlugin = require("html-webpack-pug-plugin");
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 const CopyWebpackPlugin = require("copy-webpack-plugin");
+const DashboardPlugin = require("webpack-dashboard/plugin");
+const BundleAnalyzerPlugin = require('webpack-bundle-analyzer').BundleAnalyzerPlugin;
 const { WebpackPluginServe } = require("webpack-plugin-serve");
 const purgeCssPlugin = require("purgecss-webpack-plugin");
 
@@ -29,6 +31,14 @@ exports.aliases = () => ({
       "@css": path.resolve(__dirname, "src/css"),
     },
   },
+});
+
+exports.dashboardPlugin = (pluginOptions = {}) => ({
+  plugins: [ new DashboardPlugin(pluginOptions) ],
+});
+
+exports.bundleAnalyzerPlugin = (pluginOptions = {}) => ({
+  plugins: [ new BundleAnalyzerPlugin(pluginOptions) ],
 });
 
 exports.devServer = () => ({

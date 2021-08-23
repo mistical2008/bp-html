@@ -3,16 +3,42 @@
 exports.fonts = {
   variants: {
     "Jost": {
-      "300": ['woff, woff2, eot', 'cyrillic'],
-      "400": ['woff, woff2, eot', 'cyrillic'],
-      "500": ['woff, woff2, eot', 'cyrillic'],
-      "600": ['woff, woff2, eot', 'cyrillic'],
-      "700": ['woff, woff2, eot', 'cyrillic'],
-      "800": ['woff, woff2, eot', 'cyrillic'],
+      "300": ['woff2', 'cyrillic, latin-ext'],
+      "400": ['woff2', 'cyrillic, latin-ext'],
+      "500": ['woff2', 'cyrillic, latin-ext'],
+      "600": ['woff2', 'cyrillic, latin-ext'],
+      "700": ['woff2', 'cyrillic, latin-ext'],
+      "800": ['woff2', 'cyrillic, latin-ext'],
     },
   },
   display: "swap",
-  foundries: ["google"],
+  // foundries: ["google"],
   hosted: ["./src/assets/fonts"],
 };
 
+exports.css = {
+  grid: {
+    containerWidth: 1240,
+    collumns: 12,
+    gridGutter: 15,
+    gridHorPadding: 20,
+  },
+  breakpoints: {
+    desktop: 1240,
+    tabletL: 980,
+    labletM: 780,
+    mobileL: 568,
+    mobileM: 320,
+  },
+  designTokens: {
+    color: {
+    },
+    spacings: {
+    },
+    font: {
+      families: [],
+      sizes: [],
+      weights: [],
+    }
+  }
+}
