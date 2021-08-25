@@ -1,0 +1,22 @@
+.hero__description {
+  position: relative;
+  z-index: var(--global-z-content);
+  --width-mobile: 12;
+  --width-desktop: 3;
+}
+.menu-sample {
+  @util position(absolute, 0 20px null nll);
+  visibility: hidden;
+  z-index: var(--global-z-popup);
+  transition: presence-start 0.5s ease-in-out, transform 0.5s ease-out;
+  opacity: 0;
+  transform: translateY(-100%);
+  background-color: black(0.3);
+}
+
+.menu-sample_show {
+  visibility: visible;
+  transition: presence-end 0.5s;
+  transform: translateY(0);
+  opacity: 1;
+}

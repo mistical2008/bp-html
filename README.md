@@ -14,8 +14,8 @@
   - [x] postcss-fluidvars — fluid values with setting min/max viewport and min/max value in :root or any rule
   - [ ] system.css
   - [x] postcss-calc
-  - [ ] postcss-will-change-transition
+  - [x] postcss-will-change-transition
   - [ ] stylelint-order-htmlacademy 
   - [ ] postcss-fontpath  
   - [ ] postcss-google-font (try to setup properly. Doesn't works now)
-  - [ ] [postcss-presence-transition - npm](https://www.npmjs.com/package/postcss-presence-transition) — Implementation of [technique](http://www.greywyvern.com/?post=337) which solves situation where you would like to transition display property
+  - [x] [postcss-presence-transition - npm](https://www.npmjs.com/package/postcss-presence-transition) — Implementation of [technique](http://www.greywyvern.com/?post=337) which solves situation where you would like to transition display property
