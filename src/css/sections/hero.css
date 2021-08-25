@@ -4,6 +4,11 @@
   --width-mobile: 12;
   --width-desktop: 3;
 }
+
+.hero__title {
+  font-family: Arial;
+}
+
 .menu-sample {
   @util position(absolute, 0 20px null nll);
   visibility: hidden;

@@ -25,6 +25,7 @@ module.exports = {
     }),
     require("postcss-sorting"),
     require("postcss-advanced-variables"),
+    require("postcss-sorting"),
     require("postcss-url"),
     require("postcss-easy-z"),
     require("postcss-easing-gradients"),
@@ -38,6 +39,7 @@ module.exports = {
     require('postcss-pxtorem')({ replace: false }), // rem as fallback
     require("postcss-color-rgba-fallback"),
     require('postcss-flexbugs-fixes'),
+    require('postcss-fontstack-auto'),
     require('postcss-presence-transition'),
     require('postcss-will-change-transition'),
     require('postcss-will-change'),
