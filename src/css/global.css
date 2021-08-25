@@ -3,10 +3,11 @@
 @import 'sanitize.css/forms.css';
 @import 'sanitize.css/assets.css';
 @import 'sanitize.css/reduce-motion.css';
+@google-font 'Jost';
 
 /* Set core root defaults */
 html {
-  font-family: 'Mazzard H', Arial, Helvetica, sans-serif;
+  font-family: 'Gilroy', Arial, Helvetica, sans-serif;
   color: var(--global-dark-800-color);
   scroll-behavior: smooth;
 }

@@ -9,10 +9,10 @@ module.exports = {
   plugins: [
     postcssImport(
       postcssNormalize().postcssImport(),
+      require("postcss-google-font"),
       require("postcss-font-magician")(fontsConfig),
       require("stylelint"),
     ),
-    require("postcss-google-font"),
     require("postcss-functions")({
       functions: {
         ...customFunctions,
@@ -31,14 +31,17 @@ module.exports = {
     // require("tailwindcss"),
     require("postcss-aspect-ratio"),
     require("postcss-preset-env"),
+    require("postcss-fluidvars")({namespace: 'fv'}),
     require("postcss-responsive-images"),
     require("postcss-utilities"),
-    require("autoprefixer"),
     require("postcss-focus"),
     require('postcss-pxtorem')({ replace: false }), // rem as fallback
     require("postcss-color-rgba-fallback"),
     require('postcss-flexbugs-fixes'),
+    require('postcss-will-change-transition'),
     require('postcss-will-change'),
+    require('postcss-calc'),
+    require("autoprefixer"),
     require("postcss-browser-reporter"),
   ],
 };

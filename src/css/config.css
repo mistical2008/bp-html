@@ -1,4 +1,9 @@
 :root {
+  /* Fluid vars */  
+    --fv-design-min: 320;
+    --fv-design-max: 1280;
+
+  /* Colors */  
   --global-blue-900-color: #06346A;
   --global-blue-800-color: #02458C;
   --global-blue-700-color: #0B64CC;

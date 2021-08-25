@@ -3,10 +3,15 @@
 @import './config.css';
 @import './fonts.css';
 @import './grid.css';
-/* @import './animations.css'; */
+@import './animations.css';
 @import './forms.css';
 @import './buttons.css';
 /* @import './sections/header.css'; */
 /* @import './popup.css'; */
 @import './icons.css';
+@import './utils.css';
+
+/* Import your files between this comment and ./utils.css */
+@import './sections/hero.css';
+
 @import './utils.css';

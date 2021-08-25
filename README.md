@@ -11,9 +11,9 @@
   - [x] install postcss-google-font (try to setup properly. Doesn't works now)
   - [x] install [postcss-presence-transition - npm](https://www.npmjs.com/package/postcss-presence-transition) — Implementation of [technique](http://www.greywyvern.com/?post=337) which solves situation where you would like to transition display property
 - [ ] Setup:
-  - [ ] postcss-fluidvars — fluid values with setting min/max viewport and min/max value in :root or any rule
+  - [x] postcss-fluidvars — fluid values with setting min/max viewport and min/max value in :root or any rule
   - [ ] system.css
-  - [ ] postcss-calc
+  - [x] postcss-calc
   - [ ] postcss-will-change-transition
   - [ ] stylelint-order-htmlacademy 
   - [ ] postcss-fontpath  

@@ -2,7 +2,7 @@
   display: inline-block;
   /* flex-shrink: 0; */
   position: relative;
-  color: var(--global-color-white-900);
+  /* color: var(--global-color-white-900); */
   font: inherit;
   font-size: calc(12px + (18 - 12) * ((100vw - 320px) / (1280 - 320)));
   font-weight: 700;

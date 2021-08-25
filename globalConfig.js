@@ -1,7 +1,7 @@
 // https://github.com/csstools/postcss-font-magician
 // for using in css without @font-face rule
 exports.fonts = {
-  variants: {
+  /* variants: {
     "Jost": {
       "300": ['woff2', 'cyrillic, latin-ext'],
       "400": ['woff2', 'cyrillic, latin-ext'],
@@ -10,9 +10,9 @@ exports.fonts = {
       "700": ['woff2', 'cyrillic, latin-ext'],
       "800": ['woff2', 'cyrillic, latin-ext'],
     },
-  },
+  }, */
   display: "swap",
-  // foundries: ["google"],
+  foundries: ["hosted"],
   hosted: ["./src/assets/fonts"],
 };
 
