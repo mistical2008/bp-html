@@ -1,10 +1,21 @@
 # Frontend boilerplate for static sites markup
 
 ## TODO
-- [ ] install postcss-fluidvars — fluid values with setting min/max viewport and min/max value in :root or any rule
-- [ ] install system.css
-- [ ] install postcss-calc
-- [ ] install postcss-will-change-transition
-- [ ] install stylelint-order-htmlacademy 
-- [ ] install postcss-fontpath  
-- [ ] install postcss-google-font (try to setup properly. Doesn't works now)
+- [x] Install:
+  - [x] install postcss-fluidvars — fluid values with setting min/max viewport and min/max value in :root or any rule
+  - [x] install system.css
+  - [x] install postcss-calc
+  - [x] install postcss-will-change-transition
+  - [x] install stylelint-order-htmlacademy 
+  - [x] install postcss-fontpath  
+  - [x] install postcss-google-font (try to setup properly. Doesn't works now)
+  - [x] install [postcss-presence-transition - npm](https://www.npmjs.com/package/postcss-presence-transition) — Implementation of [technique](http://www.greywyvern.com/?post=337) which solves situation where you would like to transition display property
+- [ ] Setup:
+  - [ ] postcss-fluidvars — fluid values with setting min/max viewport and min/max value in :root or any rule
+  - [ ] system.css
+  - [ ] postcss-calc
+  - [ ] postcss-will-change-transition
+  - [ ] stylelint-order-htmlacademy 
+  - [ ] postcss-fontpath  
+  - [ ] postcss-google-font (try to setup properly. Doesn't works now)
+  - [ ] [postcss-presence-transition - npm](https://www.npmjs.com/package/postcss-presence-transition) — Implementation of [technique](http://www.greywyvern.com/?post=337) which solves situation where you would like to transition display property
