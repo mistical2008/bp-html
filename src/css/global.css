@@ -1,8 +1,6 @@
 @import-sanitize;
-/* @import-sanitize 'typography.css';
-@import-sanitize 'forms.css';
-@import-sanitize 'assets.css';
-@import-sanitize 'reduce-motion.css'; */
+@import-sanitize 'sanitize.css/typography';
+@import-sanitize 'sanitize.css/forms';
 
 @google-font 'Jost' 100,200,300,400,500,600,700,800,900 display=swap;
 
