@@ -1,17 +1,18 @@
 /* @import url('https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,400;0,500;0,600;0,700;0,800;1,400;1,500;1,600;1,700;1,800&display=swap'); */
-@import './global.css';
-@import './config.css';
-@import './fonts.css';
-@import './grid.css';
-@import './animations.css';
-@import './forms.css';
-@import './buttons.css';
-/* @import './sections/header.css'; */
+@import "./global.css";
+@import "./config.css";
+@import "./fonts.css";
+@import "./grid.css";
+@import "./animations.css";
+@import "./forms.css";
+@import "./buttons.css";
 /* @import './popup.css'; */
-@import './icons.css';
-@import './utils.css';
+@import "./icons.css";
+@import "./utils.css";
 
-/* Import your files between this comment and ./utils.css */
-@import './sections/hero.css';
+/* <<< Import your files between this comment and "End of custom code" line */
+/* @import './sections/header.css'; */
+@import "./sections/hero.css";
 
-@import './utils.css';
+/* >>> End of custom code */
+@import "./utils.css";

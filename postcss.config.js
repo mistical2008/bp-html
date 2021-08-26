@@ -1,54 +1,56 @@
 // @ts-ignore
-const postcssImport = require("postcss-import");
-const postcssNormalize = require("postcss-normalize");
-const fontsConfig = require("./globalConfig.js").fonts;
-const customFunctions = require("./postcss-functions/fluid")
+const postcssImport = require('postcss-import');
+const postcssNormalize = require('postcss-normalize');
+const fontsConfig = require('./globalConfig.js').fonts;
+const customFunctions = require('./postcss-functions/fluid');
 
 module.exports = {
   // syntax: 'postcss-scss',
   plugins: [
-    postcssImport(
-      postcssNormalize().postcssImport(),
-      require("postcss-google-font"),
-      require("postcss-font-magician")(fontsConfig),
-      require("stylelint"),
-    ),
-    require("postcss-functions")({
+    require('postcss-font-magician')(fontsConfig),
+    postcssImport({
+      plugins: [
+        // require("postcss-grid-fluid"),
+        postcssNormalize(),
+        require('stylelint'),
+      ],
+    }),
+    require('postcss-google-font'),
+    /* require("postcss-functions")({
       functions: {
         ...customFunctions,
       }
-    }),
-    require("postcss-color-alpha"),
-    require("postcss-easysprites")({
+    }), */
+    require('postcss-color-alpha'),
+    require('postcss-easysprites')({
       imagePath: './src/assets/img',
       spritePath: './dist/assets/img/sprites',
     }),
-    require("postcss-sorting"),
-    require("postcss-advanced-variables"),
-    require("postcss-sorting"),
-    require("postcss-url"),
-    require("postcss-easy-z"),
-    require("postcss-easing-gradients"),
+    require('postcss-sorting'),
+    // require("postcss-advanced-variables"),
+    require('postcss-sorting'),
+    require('postcss-url'),
+    require('postcss-easy-z'),
+    require('postcss-easing-gradients'),
     // require("tailwindcss"),
-    require("postcss-aspect-ratio"),
-    require("postcss-preset-env"),
-    require("postcss-fluidvars")({namespace: 'fv'}),
-    require("postcss-responsive-images"),
-    require("postcss-utilities"),
-    require("postcss-focus"),
-    require('postcss-pxtorem')({ replace: false }), // rem as fallback
-    require("postcss-color-rgba-fallback"),
+    require('postcss-aspect-ratio'),
+    require('postcss-preset-env'),
+    require('postcss-fluidvars')({namespace: 'fv'}),
+    require('postcss-responsive-images'),
+    require('postcss-utilities'),
+    require('postcss-focus'),
+    require('postcss-pxtorem')({replace: false}), // rem as fallback
+    require('postcss-color-rgba-fallback'),
     require('postcss-flexbugs-fixes'),
     require('postcss-fontstack-auto'),
     require('postcss-presence-transition'),
     require('postcss-will-change-transition'),
     require('postcss-will-change'),
     require('postcss-calc'),
-    require("autoprefixer"),
-    require("postcss-browser-reporter"),
+    require('autoprefixer'),
+    require('postcss-browser-reporter'),
   ],
 };
-
 
 // https://ismamz.github.io/postcss-utilities
 // https://github.com/postcss/postcss-browser-reporter

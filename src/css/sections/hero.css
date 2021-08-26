@@ -6,7 +6,7 @@
 }
 
 .hero__title {
-  font-family: Arial;
+  font-family: Jost;
 }
 
 .menu-sample {
@@ -25,3 +25,4 @@
   transform: translateY(0);
   opacity: 1;
 }
+
