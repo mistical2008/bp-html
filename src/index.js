@@ -1,6 +1,26 @@
 import './css/index.css'
-console.log("Index.js entry file");
+import {toggleActive} from './js/handlers.js';
+console.log("Main index.js entry file");
 
-document.querySelector('.btn').addEventListener('click', (evt) => {
-  document.querySelector('.menu-sample').classList.toggle('menu-sample_show');
+const navSelector = 'menu__nav-wrapper';
+const navSelectorActive = 'menu__nav-wrapper_active';
+const navBtnSelector = 'js-nav-menu-icon';
+
+function toggleNavMenu(navSelector, navSelectorActive) {
+  toggleActive(navSelector, navSelectorActive);
+}
+
+// Main runtime function
+function main() {
+  // >>> Place your code there
+  document.addEventListener('click', evt => {
+    if (evt.target === document.querySelector(`.${navBtnSelector}`)) {
+      toggleNavMenu(navSelector, navSelectorActive);
+    }
+  });
+  // <<< Place your code there
+}
+
+document.addEventListener('DOMContentLoaded', function() {
+  main();
 });
