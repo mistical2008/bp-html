@@ -173,6 +173,7 @@ exports.loadFonts = () => {
         {
           test: /\.(woff(2)?|ttf|eot)(\?v=\d+\.\d+\.\d+)?$/,
           type: "asset",
+          generator: { filename: "./assets/[name].[ext]" },
         },
       ],
     },
