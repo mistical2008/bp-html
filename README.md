@@ -20,3 +20,4 @@
   - [ ] postcss-google-font (try to setup properly. Doesn't works now)
   - [x] [postcss-presence-transition - npm](https://www.npmjs.com/package/postcss-presence-transition) — Implementation of [technique](http://www.greywyvern.com/?post=337) which solves situation where you would like to transition display property
   - [x] [postcss-fontstack-auto](https://www.npmjs.com/package/postcss-fontstack-auto)
+  - [ ] [postcss-fluid-grid](https://www.npmjs.com/package/postcss-grid-fluid)

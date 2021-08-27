@@ -2,7 +2,7 @@ const { mode } = require("webpack-nano/argv");
 const { merge } = require("webpack-merge");
 const parts = require("./webpack.parts");
 
-const cssLoaders = [parts.postCssLoader()];
+const cssLoaders = [ parts.postCssLoader(), ...parts.sassLoaders() ];
 const imageSizeLimit = 15000;
 
 // Set config for css-modules
