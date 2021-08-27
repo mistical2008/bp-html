@@ -1,11 +1,11 @@
 import { AsYouType } from "libphonenumber-js";
 import { printFormData } from "./utils";
 
-function toggleActive(selector, toggleClass) {
-  const el = document.querySelector(selector);
+function toggleActive(selector, toggleClassName) {
+  const el = document.querySelector(`${selector}`);
 
   if (!el) return;
-  el.classList.toggle(toggleClass);
+  el.classList.toggle(toggleClassName);
 }
 
 function showPopupContainer(containerSelector, pageContentSelector) {
