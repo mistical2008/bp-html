@@ -21,7 +21,17 @@ const commonConfig = merge([
     },
   },
   parts.aliases(),
-  parts.pug(),
+  parts.pug({
+    minify: {
+      collapseWhitespace: false,
+      keepClosingSlash: true,
+      removeComments: true,
+      removeRedundantAttributes: true,
+      removeScriptTypeAttributes: true,
+      removeStyleLinkTypeAttributes: true,
+      useShortDoctype: true
+    },
+  }),
   parts.esbuild(),
   parts.loadFonts(),
   parts.loadImages({ limit: imageSizeLimit }),
