@@ -59,24 +59,30 @@ exports.devServer = () => ({
   ],
 });
 
-exports.pug = () => ({
+exports.pug = (options = {}) => ({
   plugins: [
     // Automatic creation any html pages (Don't forget to RERUN dev server)
     // see more: https://github.com/vedees/webpack-template/blob/master/README.md#create-another-html-files
     // best way to create pages: https://github.com/vedees/webpack-template/blob/master/README.md#third-method-best
     ...PAGES.map(
-      page =>
+      (page) =>
         new HtmlWebpackPlugin({
           template: `${PAGES_DIR}/${page}`,
-          filename: `./${page.replace(/\.pug/, '.html')}`,
-        }),
+          filename: `./${page.replace(/\.pug/, ".html")}`,
+        ...options
+        })
     ),
   ],
   module: {
     rules: [
       {
         test: /\.pug$/,
-        use: 'pug-loader',
+        use: {
+          loader: "pug-loader",
+          options: {
+            pretty: true,
+          }
+        }
       },
     ],
   },
