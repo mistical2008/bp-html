@@ -24,6 +24,7 @@
   /* Grid */  
   --global-grid-columns: 12;
   --global-grid-gutter: 15px;
+  --global-grid-horPaddings: 20px;
 
   /* Fonts */
   --global-heading-fontSize: 58px;
