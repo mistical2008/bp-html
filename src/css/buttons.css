@@ -1,19 +1,19 @@
 .btn {
-  background-color: transparent;
-  display: inline-block;
   /* flex-shrink: 0; */
   position: relative;
+  display: inline-block;
   /* color: var(--global-color-white-900); */
   font: inherit;
-  font-size: calc(12px + (18 - 12) * ((100vw - 320px) / (1280 - 320)));
   font-weight: 700;
+  font-size: calc(12px + (18 - 12) * ((100vw - 320px) / (1280 - 320)));
   line-height: 1;
-  text-decoration: none;
-  vertical-align: middle;
-  border: none;
-  cursor: pointer;
   text-align: center;
   text-transform: lowercase;
+  text-decoration: none;
+  vertical-align: middle;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
 
   /* debug */
   /* outline: 1px solid red; */

@@ -2,11 +2,11 @@
 * For variable fonts add classes like .vf-wght-100 (font-variation-settings: 'wght' 100)
 * */
 .heading {
+  font-weight: 800;
   font-size: var(--fv-38-100);
   font-family: 'Jost';
   /* font-size: calc(24px + (38 - 24) * ((100vw - 320px) / (1280 - 320))); */
   line-height: 1.3;
-  font-weight: 800;
   text-transform: lowercase;
 }
 

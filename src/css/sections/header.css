@@ -1,11 +1,11 @@
 .header {
-  background-color: #ffffff;
   position: absolute;
-  left: 0;
   top: -120px;
-  width: 100%;
+  left: 0;
   z-index: var(--global-z-header);
-  @util padding(27px, null)
+  width: 100%;
+  background-color: #ffffff;
+  @util padding(27px, null);
 }
 
 .header__content {
@@ -46,28 +46,28 @@
 }
 
 .menu__icon {
-  display: none;
   position: absolute;
-  right: 0;
   top: -52px;
-  @util size(40px);
+  right: 0;
+  display: none;
   cursor: pointer;
   transition: all 0.3s ease-in-out;
+  @util size(40px);
 }
 
 .menu__icon::before,
 .menu__icon::after {
-  content: '';
-  display: block;
   position: absolute;
   right: 0;
+  z-index: var(--global-z-burger);
+  display: block;
+  background-color: var(--global-dark-800-color);
+  transform-origin: center;
+  transition: all 0.3s ease-in-out;
+  content: '';
   /* top: 50%; */
   /* transform: translateX(-50%); */
   @util size(30px, 2px);
-  background-color: var(--global-dark-800-color);
-  z-index: var(--global-z-burger);
-  transition: all 0.3s ease-in-out;
-  transform-origin: center;
 }
 
 

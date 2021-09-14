@@ -4,7 +4,7 @@
 @import '../../node_modules/sanitize.css/assets.css';
 @import '../../node_modules/sanitize.css/reduce-motion.css';
 
-@google-font 'Jost' 100,200,300,400,500,600,700,800,900 display=swap;
+/* @google-font 'Jost' 100,200,300,400,500,600,700,800,900 display=swap; */
 
 /* Set core root defaults */
 html {

@@ -70,6 +70,6 @@ fieldset {
 
 /* add some symbol for required fields */
 .input-label_required::after {
-  content: "*";
   color: var(--global-accent-900-color);
+  content: "*";
 }
