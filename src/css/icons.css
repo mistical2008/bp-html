@@ -5,12 +5,10 @@
 
 .icon::before {
   position: absolute;
-  /* @util center; */
   top: 50%;
   left: 0;
   z-index: -1;
   display: block;
-  /* width: 50%; */
   height: 100%;
   background-repeat: no-repeat;
   background-size: 100%;
@@ -18,11 +16,11 @@
   content: '';
 }
 
-._icon_left {
+.icon_left::before {
   left: 0;
 }
 
-.icon-menu::before {
+.icon_menu::before {
   position: absolute;
   display: block;
   width: 100%;
@@ -34,7 +32,7 @@
   @util center;
 }
 
-.icon-call::before {
+.icon_call::before {
   position: absolute;
   display: block;
   background-image: url('../assets/img/icon-phone.svg');
@@ -42,22 +40,42 @@
   content: '';
 }
 
-.icon-fb {
+.icon_fb {
   background-image: url('../assets/img/icon-fb-black.svg');
 }
 
-.icon-vimeo {
+.icon_vimeo {
   background-image: url('../assets/img/icon-vimeo-black.svg');
 }
 
-.icon-instagram {
+.icon_instagram {
   background-image: url('../assets/img/icon-insta-black.svg');
 }
 
-.icon-attachment::before {
+.icon_attachment::before {
   background-image: url('../assets/img/icon-attachment.svg');
 }
 
-.icon-circle::before {
+.icon_circle::before {
   background-image: url('../assets/img/icon-circle.svg');
+}
+
+.icon_triangle-up::before {
+  @util triangle(5px, var(--global-secondary-900-color), up);
+}
+
+.icon_triangle-down::before {
+  @util triangle(5px, var(--global-secondary-900-color), down);
+}
+
+.icon_corner-down::before {
+  border-bottom: 2px solid var(--global-secondary-900-color);
+  border-left: 2px solid var(--global-secondary-900-color);
+  transform: translate(0, -50%) rotate(-45deg);
+}
+
+.icon_corner-up::before {
+  border-bottom: 2px solid var(--global-secondary-900-color);
+  border-left: 2px solid var(--global-secondary-900-color);
+  transform: translate(0, -50%) rotate(135deg);
 }
