@@ -3,21 +3,17 @@
   flex-wrap: wrap;
 }
 
-._container._fw { 
-  @util margin(null, -15px, null)
-}
+/* ._container._fw { 
+  @util margin(null, calc(var(--global-grid-gutter) * -1), null, calc(var(--global-grid-gutter) * -1));
+} */
 
 ._wrapper {
   max-width: var(--global-container-width);
+  height: 100%;
   margin: 0 auto;
-  padding: 0 20px;
+  padding: 0 var(--global-grid-horPaddings);
+  overflow: hidden;
 }
-
-/* ._g-wrapper { */
-  /* max-width: 856px; */
-  /* margin: 0 auto; */
-  /* padding: 0 20px; */
-/* } */
 
 ._col {
   --columns: var(--global-grid-columns, 12); /* number of columns in the grid system */

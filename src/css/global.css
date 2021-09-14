@@ -1,13 +1,15 @@
-@import-sanitize;
-@import-sanitize 'sanitize.css/typography';
-@import-sanitize 'sanitize.css/forms';
+@import '../../node_modules/sanitize.css/sanitize.css';
+@import '../../node_modules/sanitize.css/forms.css';
+@import '../../node_modules/sanitize.css/typography.css';
+@import '../../node_modules/sanitize.css/assets.css';
+@import '../../node_modules/sanitize.css/reduce-motion.css';
 
 @google-font 'Jost' 100,200,300,400,500,600,700,800,900 display=swap;
 
 /* Set core root defaults */
 html {
-  font-family: 'Gilroy', Arial, Helvetica, sans-serif;
   color: var(--global-dark-800-color);
+  font-family: 'Gilroy', Arial, Helvetica, sans-serif;
   scroll-behavior: smooth;
 }
 
@@ -28,20 +30,3 @@ a, a:link, a:active, a:visited {
   transition: all 0.3s ease-in-out;
 }
 
-/* input:required:invalid,
-input:invalid {
-  border: 2px solid #cd5c5c;
-}
-
-input:required:valid {
-  border-color: #20b2aa;
-}
-
-input:focus:invalid {
-  border: none;
-}
-
-input:valid {
-  border: 2px solid black;
-}
- */

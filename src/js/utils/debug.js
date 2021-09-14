@@ -4,4 +4,4 @@ function printFormData(formData) {
   }
 }
 
-export { printFormData };
+export {printFormData};
