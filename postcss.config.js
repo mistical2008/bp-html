@@ -38,6 +38,7 @@ module.exports = {
     require('postcss-utilities'),
     require('postcss-focus'),
     require('postcss-pxtorem')({replace: false}), // rem as fallback
+    require('postcss-custom-properties'),
     require('postcss-color-rgba-fallback'),
     require('postcss-flexbugs-fixes'),
     require('postcss-fontstack-auto'),
