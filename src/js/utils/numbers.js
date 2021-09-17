@@ -15,4 +15,27 @@ function mbToBytes(mb) {
   return mb * 1048576;
 }
 
-export {mbToBytes, bytesToMb, getPercentage};
+/**
+ * Returns fibonacci numbers sequence with given length
+ * @param {Number}  num length of fibonacci sequence
+ * @param {Object} memo fibonacci sequence memoisation object
+ * */
+function fiboMemo(num, memo = {}) {
+  if (memo[num]) return memo[num];
+  if (num <= 1) return 1;
+
+  return (memo[num] = fiboMemo(num - 1, memo) + fiboMemo(num - 2, memo));
+}
+
+/**
+ * @description  Returns a random number from min to max.
+ * @param {Number} min
+ * @param {Number} max
+ */
+function random(min, max) {
+  const num = Math.floor(Math.random() * (max - min + 1)) + min;
+  return num;
+}
+endsnippet;
+
+export {mbToBytes, bytesToMb, getPercentage, fiboMemo, memoize, random};
