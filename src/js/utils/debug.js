@@ -5,13 +5,21 @@ function printFormData(formData) {
 }
 
 /**
-* @description logs current file loaded while NODE_ENV === 'development'
-* @param {string} optional file purpose description. logged to console.
-*/
-function devLogEntryLoaded(filePurpose = 'Entry') {
+ * @description logs while NODE_ENV === 'development'
+ * @param {string} message - logged to console.
+ */
+function devLog(message = "Specify log message") {
   if (process.env.NODE_ENV === "development") {
-    console.log(`${filePurpose} loaded: `, __filename);
+    console.log(message);
   }
 }
 
-export {printFormData, devLogEntryLoaded};
+/**
+ * @description logs current file loaded while NODE_ENV === 'development'
+ * @param {string} optional file purpose description. logged to console.
+ */
+function devLogEntryLoaded(filePurpose = "Entry") {
+    devLog(`${filePurpose} loaded: ${__dirname}/${__filename}`);
+}
+
+export { printFormData, devLogEntryLoaded };
