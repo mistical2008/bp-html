@@ -38,4 +38,4 @@ function random(min, max) {
 }
 endsnippet;
 
-export {mbToBytes, bytesToMb, getPercentage, fiboMemo, memoize, random};
+export {mbToBytes, bytesToMb, getPercentage, fiboMemo, random};
