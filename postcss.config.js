@@ -10,6 +10,7 @@ module.exports = {
     postcssImport({
       plugins: [
         require('postcss-preset-env'),
+        require("tailwindcss"),
         require('stylelint'),
         require('postcss-sorting'),
         require('postcss-browser-reporter'),
@@ -30,7 +31,6 @@ module.exports = {
     require('postcss-url'),
     require('postcss-easy-z'),
     require('postcss-easing-gradients'),
-    // require("tailwindcss"),
     require('postcss-aspect-ratio'),
     // require('postcss-preset-env'),
     require('postcss-fluidvars')({namespace: 'fv'}),
